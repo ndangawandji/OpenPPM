@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!--
+   Copyright (C) 2009-2012 SM2 BALEARES
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+   See the GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program. If not, see http://www.gnu.org/licenses/.
+  
+   For more information, please contact SM2 BALEARES.
+   Mail: info@open-ppm.org
+   Web: http://www.talaia-openppm.es/
+  
+   Authors : Javier Hernandez Castillo, Daniel Casas Lopez
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Hibernate Generator by Javier Hernandez -->
+<hibernate-mapping>
+    <class name="es.sm2.openppm.model.Expenses" table="expenses">
+        <id name="idExpense" type="java.lang.Integer">
+            <column name="IdExpense" />
+            <generator class="native">
+                <param name="sequence">expenses_SEQ</param>
+            </generator>
+        </id>
+        <many-to-one name="projectcosts" class="es.sm2.openppm.model.Projectcosts" fetch="select">
+            <column name="IdProjectCosts" />
+        </many-to-one>
+        <many-to-one name="budgetaccounts" class="es.sm2.openppm.model.Budgetaccounts" fetch="select">
+            <column name="IdBudgetAccount" />
+        </many-to-one>
+        <property name="planned" type="java.lang.Double">
+            <column name="Planned" precision="22" scale="0" />
+        </property>
+        <property name="actual" type="java.lang.Double">
+            <column name="Actual" precision="22" scale="0" />
+        </property>
+        <property name="description" type="string">
+            <column name="Description" length="50" />
+        </property>
+        <set name="expensesheets" inverse="true" lazy="true" table="expensesheet" fetch="select">
+            <key>
+                <column name="idExpense" />
+            </key>
+            <one-to-many class="es.sm2.openppm.model.Expensesheet" />
+        </set>
+    </class>
+</hibernate-mapping>

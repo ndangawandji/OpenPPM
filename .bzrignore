@@ -1,0 +1,8 @@
+RE:\.?[^.]+
+openppm.moved by bazaar.7z
+./WebContent/jsp/assignment/assignment_statement_popup.jsp
+./WebContent/jsp/timesheet/common/statement_timesheet_popup.jsp
+*.BASE
+*.OTHER
+*.THIS
+*.bak
