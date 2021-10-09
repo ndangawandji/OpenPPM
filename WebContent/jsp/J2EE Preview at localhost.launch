@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<launchConfiguration type="org.eclipse.jst.server.preview.launchConfigurationType">
-<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
-<listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
-</listAttribute>
-<stringAttribute key="server-id" value="J2EE Preview at localhost"/>
-</launchConfiguration>
