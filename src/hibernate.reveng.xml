@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+<type-mapping>
+	<sql-type jdbc-type="INTEGER" hibernate-type="java.lang.Integer"
+		not-null="true" length="11">
+	</sql-type>
+	<sql-type jdbc-type="VARCHAR" hibernate-type="string" length="254"
+		not-null="false">
+	</sql-type>
+	<sql-type jdbc-type="DOUBLE" hibernate-type="java.lang.Double"
+		precision="22" not-null="false">
+	</sql-type>
+	<sql-type jdbc-type="DATE" hibernate-type="date" length="10"
+		not-null="false">
+	</sql-type>
+	<sql-type jdbc-type="INTEGER" hibernate-type="java.lang.Integer"
+		not-null="true" length="11">
+	</sql-type>
+</type-mapping>
+<table-filter match-catalog="openppm" match-name="purchaseorder"/>
+</hibernate-reverse-engineering>
